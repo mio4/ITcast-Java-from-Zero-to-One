@@ -11,6 +11,16 @@
 			arr[2] = new Array("沈阳市","锦州市","大连市","铁岭市");
 			arr[3] = new Array("郑州市","洛阳市","安阳市","南阳市");
 		</script>
+		<script>
+			function selCity(index){
+				var cities = arr[index];
+				var cityChoices = document.getElementsByName("city")[0]; //ByName返回的是数组类型，获取市的下拉选项：因为只有一个元素，所以取[0]，
+				cityChoices.innerHTML = ("<option >-请选择-</option> 	");
+				for(var i=0; i < cities.length; i++){
+					cityChoices.innerHTML += ("<option>" + cities[i] + "</option>");
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<form action="#" method="get">
