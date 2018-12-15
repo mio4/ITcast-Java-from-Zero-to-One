@@ -1,2 +1,7 @@
 # ignore class files
 *.classes
+/bin/
+
+# 不上传仓库信息
+/repository/*
+/.metadata/
